@@ -65,7 +65,10 @@ SELECT * FROM cities WHERE countrycode= 'ARE' AND name ILIKE 'Sh%'
 -- Write SQL query here
 
 
-SELECT * FROM cities WHERE id = 65
+SELECT cities.*
+FROM cities
+JOIN countries ON cities.id = countries.capital
+WHERE countries.code = 'ARE';
 
 -- Clue #7
 -- At the capital, Conan finds one final note:
