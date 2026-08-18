@@ -33,7 +33,10 @@ SELECT * FROM cities where id = 2973
 
 -- Write SQL query here
 
-SELECT * FROM countries WHERE governmentform = 'Emirate Federation'
+SELECT * FROM countries
+JOIN countrylanguages ON code = countrycode
+WHERE governmentform = 'Emirate Federation'
+AND countrylanguages.language = 'Arabic';
 
 -- Clue #4
 -- There are 5 cities from the country in Clue #3 appear in the case database.
